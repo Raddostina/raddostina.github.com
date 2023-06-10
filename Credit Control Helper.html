@@ -7,7 +7,22 @@
     <link rel="stylesheet" href="scratch_2.css" >
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-<body>
+<body onload="initClock()">
+<!--digital clock start-->
+<div class="datetime">
+    <div class="date">
+        <span id="dayname"> DAY</span>
+        <span id="month"> Month</span>
+        <span id="daynum"> 00</span>
+        <span id="year"> Year</span>
+    </div>
+    <div class="time">
+        <span id="hour"> 00</span>
+        <span id="minutes"> 00</span>
+        <span id="seconds"> 00</span>
+        <span id="period"> AM</span>
+    </div>
+</div>
 <div id="header">
     <h1 >CREDIT CONTROL HELPER </h1>
     <img class= "header-image" src="https://play-lh.googleusercontent.com/SiucgVKXBpRhuoWoRBgzHauAV-iXzyxcqkmGptnExGRtkNXGqzNK_EMjPm0E5dnRDnY=w240-h480-rw" alt="Yettel">
@@ -20,6 +35,7 @@
             <span class="closeMenu"><i class="fa fa-times"></i></span>
             <ul class="innerUL">
                 <li><a href="http://anubis/cgi-bin/pmsnew/pms_main.cgi" target="_blank">Anubis</a></li>
+                <li><a href="Yettel - Намери баланса си!" target="_blank1">E-shop</a></li>
                 <li><a href="https://ccf.yettel.bg/ccf/" target="_blank1">RETENTION</a></li>
                 <li><a href="https://epos.yettel.bg/epos/" target="_blank2">EPOS</a></li>
                 <li><a href="http://cx.yettel.bg/CustCare/func/wcs/Login.jsp" target="_blank3">CX</a></li>
@@ -29,9 +45,10 @@
                 <li><a href="http://172.16.3.197/daxyglobal.html" target="_blank7">DAXY</a></li>
                 <li><a href="https://bpa.globul.bg/bpa/billing" target="_blank8">BPA(billing)</a></li>
                 <li><a href="https://sm.cetin.rs/" target="_blank9">CETIN</a></li>
-                <li><a href="https://sm.cetin.rs/" target="_blank9">Siebel</a></li>?
-                <li><a href="https://web.lakorda.com/lakorda/?main=1&db=1&auth=20180714082220526det1gsqx9iem2ze2925" target="_blank9">ЛАКОРДА</a></li>?
-                <li><a href="http://192.168.0.64/acs/last2d.cgi" target="_blank9">ATM(плащания)</a></li>?
+                <li><a href="http://172.16.217.197:8080/ords/f?p=102:LOGIN_DESKTOP::::::">APP</a></li>
+                <li><a href="http://172.16.99.167/ecommunications_enu/start.swe?SWECmd=GotoView&SWEView=GB+SR+Templates+View&SWERF=1&SWEHo=172.16.99.167&SWEBU=1&SWEApplet0=Service+Request+Detail+Applet&SWERowId0=GB-87BBS06" target="_blank9">Siebel</a></li>
+                <li><a href="https://web.lakorda.com/lakorda/?main=1&db=1&auth=20180714082220526det1gsqx9iem2ze2925" target="_blank9">ЛАКОРДА</a></li>
+                <li><a href="http://192.168.0.64/acs/last2d.cgi" target="_blank9">ATM(плащания)</a></li>
 
             </ul>
         </div>
@@ -76,31 +93,30 @@
             <a href="javascript:void(0)" class="dropbtn">Коментар CX(memos)</a>
             <div class="dropdown-content">
                 <textarea name="message">Do not unbar until UBE/OB paid.</textarea>
-                <textarea name="message">do not unbar until 306 lv paid or contact credit control KA informed</textarea>
-                <textarea name="message">Limit = *** lv. until 3 paid on time invoices.</textarea>
-                <textarea name="message">not loaded gprs/voice/sms Russia  2021-04-22 01:09:05 -  2021-04-22 09:08:57 ~ хххх lv</textarea>
+                <textarea name="message">do not unbar until *** lv paid or contact credit control KA informed</textarea>
+                <textarea name="message">Limit = *** lv. until **** paid on time invoices.</textarea>
+                <textarea name="message">not loaded gprs/voice/sms *******(country name)  ****-**-**   **:**:** -  ****-**-**  **:**:** ~ хххх lv</textarea>
             </div>
         </li>
         <li class="dropdown">
             <a href="javascript:void(0)" class="dropbtn">Коментар CCS</a>
             <div class="dropdown-content">
                 <textarea name="message">Uvedomiavame Vi,che limitat Vi e promenen na *** lv. Yettel</textarea>
-                <textarea name="message">bcl
-                    Izhodiashtite Vi obazhdania sa spreni poradi nadvishavane na kreditniya limit. Molya,proverete
-zadalzheniata si kato naberete *123*1# i platete.Yettel</textarea>
-                <textarea name="message">bf
+                <textarea name="message">BCL
+                    Vie nadvishihte kreditnia limit i izhodyashtite obazhdania sa spreni. Proverete  dalzhimoto na *123# ili my.yettel.bg i molya platete. Yettel</textarea>
+                <textarea name="message">BF
 Izhodyashtite Vi obazhdania sa spreni. Za proverka na smetka naberete *123# Molya,platete v
 magazin ili prez my.yettel.bg. Yettel</textarea>
-                <textarea name="message">clch
-Po precenka na otdela za kredit kontrol, vashiat krediten limit e 20 lv. Moje da bade vazstanoven po
-vashe jelanie sled 3 plateni navreme fakturi. Yettel</textarea>
-                <textarea name="message">Staff usage
+                <textarea name="message">CLCH
+Po precenka na otdela za kredit kontrol, vashiat krediten limit e ** lv. Moje da bade vazstanoven po
+vashe jelanie sled ** plateni navreme fakturi. Yettel</textarea>
+                <textarea name="message">STAFF USAGE
 Uvedomiavame Vi, che po slujebnata Vi karta e registrirano visoko potreblenie.Za poveche informaciya se obarnete kam CreditControl@yettel.bg. Yettel
 </textarea>
-                <textarea name="message">Staff limit
+                <textarea name="message">STAFF LIMIT
 Uvedomiavame Vi, che dostignahte limita na bezplatnoto potreblenie po slujebnata si karta.Za poveche informaciya, pishete na CreditControl@yettel.bg
 </textarea>
-                <textarea name="message">Staff family
+                <textarea name="message">STAFF FAMILY
 Your limit for free usage is exceeded. For more information you can contact CreditControl@yettel.bg. Yettel
 </textarea>
             </div>
@@ -109,8 +125,8 @@ Your limit for free usage is exceeded. For more information you can contact Cred
         <li class="dropdown">
             <a href="javascript:void(0)" class="dropbtn">Email KA</a>
             <div class="dropdown-content">
-            /*    <textarea name="message">Здравейте Колеги,
-Моля за проверка, дали номер 359988937907 е в списъците за корекция на билшок. Предварително ви благодаря.!!!!
+                <textarea name="message">Здравейте Колеги,
+Моля за проверка, дали номер ******* е в списъците за корекция на билшок. Предварително ви благодаря.!!!!
 </textarea>
                 <textarea name="message">Номерът е активиран с постпон до билинг</textarea>
                 <textarea name="message">Привет,
@@ -120,14 +136,14 @@ Your limit for free usage is exceeded. For more information you can contact Cred
                 <textarea name="message">Спираме ли го:
 Company:  ХХХХХХХ
 MSISDN: ХХХХХХХ
-UBE: not loaded gprs/voice/sms Russia  2021-04-22 01:09:05 -  2021-04-22 09:08:57 ~ хххх lv
-Alarm: roaming
+UBE: not loaded gprs/voice/sms *******(country name)  ****-**-**   **:**:** -  ****-**-**  **:**:** ~ хххх lv
+Alarm: *******
 </textarea>
                 <textarea name="message">Привет,
 Този номер е спрян поради високо потребление на УДС
-Company:  ПИМЕНС ЕООД
-MSISDN: 359893061715
-UBE: 240 lv
+Company:  xxxxxxxxxx
+MSISDN: xxxxxxxxxx
+UBE: *** lv
 Alarm: VAS
 </textarea>
             </div>
@@ -136,7 +152,7 @@ Alarm: VAS
             <a href="javascript:void(0)" class="dropbtn">Текст към Cetin (non active)</a>
             <div class="dropdown-content">
                 <textarea name="message">Hi,
-We have customers in status “B”(barring of outgoing services) with gprs usage after barring.
+We have customers in status “B”(barring of outgoing services) with GPRS usage after barring.
 Pls note that  MSISDNs in "yes " column are already sent.
 </textarea>
                 <textarea name="message">Hi,
@@ -149,26 +165,43 @@ Pls note that  MSISDNs in "yes " column are already sent.
     <div id="content">
         <ul class="services">
             <li id="services-html" class="HTML">
-                <h2><a href="#services-html">Заявка SQL:</a></h2>
+                <h2><a href="#services-html">Заявка SQL: проверяваме дали е паднал флага</a></h2>
                 <ul>
-                    <li> pass: Godina_22</li>
+                    <li> База: SCORE </li><br>
+                    <li> pass: Lising_23</li>
                     <li> ЕГН:<br>
-                        select *
+                        select *<br>
                         from f_white_list
-                        WHERE egn ="
+                        WHERE egn ='****'
                     </li>
-                    <li> Булстат:<br>
-                        select *
+                    <li>select *
                         from stage_scoring.f_white_list_pros
-                        WHERE bulstat =""
+                        WHERE bulstat ='****'
                     </li>
                 </ul>
             </li>
             <li id="services-css" class="css">
-                <h2><a href="#services-css">APP</a></h2>
+                <h2><a href="#services-css">Заявка SQL: проверка на пос код за E-shop</a></h2>
                 <ul>
-                    <li> USER: CREDIT_CONTROL </li>
-                    <li> PASS: CreditControl2017 </li>
+                    <li> База: HUNTER</li><br>
+                    <li> USER: FRAUD </li><br>
+                    <li> PASS: FRAUD</li><br>
+                    <li>select *<br>
+                        from CCS3.BILLABLE_ACCOUNTS
+                        WHERE sent_to_post_code ='1799'
+                    </li>
+                </ul>
+            </li>
+            <li id="services-DAXY" class="css">
+                <h2><a href="#services-css">Заявка SQL: проверка колко предплата иска системата</a></h2>
+                <ul>
+                    <li> База: SCORE DEV</li><br>
+                    <li> USER: vmilusheva </li><br>
+                    <li> PASS: Stalker1975! </li><br>
+                    <li>select *<br>
+                        from ONLINE_SCORING.P_ALL_LOGS_CONST
+                        WHERE egn ='*****'
+                    </li>
                 </ul>
             </li>
             <li id="services-sql" class="sql">
@@ -176,7 +209,8 @@ Pls note that  MSISDNs in "yes " column are already sent.
                 <ul>
                     <li> Rout for Manuals:
                         \\globul.bg\root\FRAUD CONTROL\FCD_shared\stat</li>
-                    <li> .... </li>
+                    <li> E-shop
+                        username > RHSabeva , password > Yettel345</li>
                 </ul>
             </li>
         </ul>
@@ -186,11 +220,11 @@ Pls note that  MSISDNs in "yes " column are already sent.
         <h3 class="title"> STICKY NOTE:</h3>
         <div class ="window" data-name="w-1">
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/White_flag_waving.svg" alt="" style="float:left;width:42px;height:42px;"><br>
-            <button id='multiplewindow' class='multiplewindow' onClick='window.open("windowpopup.html","popupwindow","position: right; width=300,height=200")'; data-modal-target="#modal">WhiteFlag Check! ЕГН:</button>
+            <button id='multiplewindow' class='multiplewindow' onClick='window.open("windowpopup.html","popupwindow","position: right; width=300,height=200")'; data-modal-target="#modal">WhiteFlag Check! ЕГН/Булстат</button>
         </div>
         <div class="window" data-name="w-2">
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/White_flag_waving.svg" alt="" style="float:left;width:42px;height:42px;"><br>
-            <button id='multiplewindow2' class='multiplewindow2' onClick='window.open("windowpopup2.html","popupwindow2","width=300,height=200");' data-modal-target="#modal">WhiteFlag Check! Булстат: </button>
+            <button id='multiplewindow2' class='multiplewindow2' onClick='window.open("windowpopup2.html","popupwindow2","width=300,height=200");' data-modal-target="#modal">WhiteFlag Check!БЮДЖЕТ Булстат: </button>
         </div>
         <div class="window" data-name="w-3">
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/White_flag_waving.svg" alt="" style="float:left;width:42px;height:42px;"><br>
@@ -198,42 +232,59 @@ Pls note that  MSISDNs in "yes " column are already sent.
         </div>
     </div>
         <div  id="overlay"></div>
-    <h2>ROBOT DAILY STEPS:<br></h2>
+    <h2>ROBOT :<br></h2>
+    <h3 class="title"> ROBOT DAILY STEPS:</h3><br>
     <div class="icons">
         <div class="icon">
             <div class="bg"></div>
             <div class="glass">
-                1. Termination
+                1.<br> TERMINATION
                 <i class="bx bxl-github"></i>
             </div>
         </div>
         <div class="icon">
             <div class="bg"></div>
             <div class="glass">
-                2. CL Warning 7 days ago
+                2.CL WARNING 7 DAYS AGO
                 <i class="bx bxl-github"></i>
             </div>
         </div>
         <div class="icon">
             <div class="bg"></div>
             <div class="glass">
-                3. WF Check
+                3.<br>WF CHECK
                 <i class="bx bxl-github"></i>
             </div>
         </div>
         <div class="icon">
             <div class="bg"></div>
             <div class="glass">
-                4. openWF Check
+                4.<br>OpenWF Check
                 <i class="bx bxl-github"></i>
             </div>
         </div>
         <div class="icon">
             <div class="bg"></div>
             <div class="glass">
-                5. CL barring red pospone
+                5.<br>CL BARRING RED POSPONE
                 <i class="bx bxl-github"></i>
             </div>
+        </div>
+    </div>
+    <div class="wrapper"><br>
+
+        <br><h3 class="title"> ROBOT RULES:</h3><br>
+        <div class ="window" data-name="w-1">
+            <img src="https://www.transparentpng.com/thumb/robot/thinking-human-robot-clipart-png-9fWMqV.png" alt="thinking human robot clipart png @transparentpng.com" alt="" style="float:top;width:60px;height:60px;"><br>
+            <button id='multiplewindow4' class='multiplewindow4' onClick='window.open("windowpopup4.html","popupwindow4","position: right; width=300,height=200")'; data-modal-target="#modal">YES LOGIC<br><span><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></span>
+                <div class="icon YES">
+                </div></button>
+        </div>
+        <div class="window" data-name="w-2">
+            <img src="https://www.transparentpng.com/thumb/robot/thinking-human-robot-clipart-png-9fWMqV.png" alt="thinking human robot clipart png @transparentpng.com" alt="" style="float:top;width:60px;height:60px;"><br>
+            <button id='multiplewindow5' class='multiplewindow5' onClick='window.open("windowpopup5.html","popupwindow5","width=300,height=200");' data-modal-target="#modal">NO LOGIC<br><span><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></span>
+                <div class="icon NO">
+                </div></button>
         </div>
     </div>
             <div class="table">
@@ -250,6 +301,8 @@ Pls note that  MSISDNs in "yes " column are already sent.
                             <li> - garbage tag (reconnection/ reactivation/ storn) </li><br>
                             <li> - report (warning; barring ) </li><br>
                             <li> - mails /night alarms</li><br>
+                            <li> - Пускаме мейл с обработените заявки от e-shop</li><br>
+                            <li> - SAVE на получения файл termination в съответната папка</li><br>
                         </ul>
                     </div>
                     <div class="Price-col" data-tilt>
@@ -259,7 +312,7 @@ Pls note that  MSISDNs in "yes " column are already sent.
                             <li> - night FraudAlarm </li><br>
                             <li> - non.active</li><br>
                             <li> - Lost-stolen</li><br>
-                            <li> - ALL mail 22:00 do 9:00 </li><br>
+                            <li> - ALL mail 22:00 до 9:00 </li><br>
                             <li> - FraudAlarm </li><br>
 
                         </ul>
@@ -272,7 +325,8 @@ Pls note that  MSISDNs in "yes " column are already sent.
                             <li> - NILA(report)</li><br>
                             <li> - FraudAlarm</li><br>
                             <li> - CreditLimit KA(mail) </li><br>
-                            <li> - когато не е де преди билинг пускаме garbage реактивация, когато е ден преди билинг пускаме реактивация и реконекция </li><br>
+                            <li> - Правим между 20:00 и 22:00 Е-SHOP(категория: OLD_new; NEW_new; RETENTION with device leasing; Additional leasing</li><br>
+                            <li> - Вечерта преди билинг пускаме garbage reconnection и reactivation, когато не е вечер преди билинг пускаме само reactivation </li><br>
                         </ul>
                     </div>
                 </div>
@@ -301,22 +355,7 @@ Pls note that  MSISDNs in "yes " column are already sent.
     }
 
 </script>
-<body onload="initClock()">
-<!--digital clock start-->
-<div class="datetime">
-    <div class="date">
-        <span id="dayname"> DAY</span>
-        <span id="month"> Month</span>
-        <span id="daynum"> 00</span>
-        <span id="year"> Year</span>
-    </div>
-    <div class="time">
-        <span id="hour"> 00</span>
-        <span id="minutes"> 00</span>
-        <span id="seconds"> 00</span>
-        <span id="period"> AM</span>
-    </div>
-</div>
+
 <!--digital clock end-->
 
 <script type="text/javascript">
